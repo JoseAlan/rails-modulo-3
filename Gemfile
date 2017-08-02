@@ -3,8 +3,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-#Manage Procfile-based applications
+# Manage Procfile-based applications
 gem 'foreman'
+# Flexible authentication solution for Rails with Warden
+gem 'devise'
+# Translations for the devise gem
+gem 'devise-i18n'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 #internacionalizacion
