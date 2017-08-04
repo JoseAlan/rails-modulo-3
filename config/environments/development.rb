@@ -12,8 +12,12 @@ Rails.application.configure do
   #Better Errors Config
   BetterErrors::Middleware.allow_ip! ENV['TRUSTED_IP'] if ENV['TRUSTED_IP']
 
-  #Devise Email Config
+  #Devise email Config
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
+  #Foreman console fix
+  $stdout.sync = true
+
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
