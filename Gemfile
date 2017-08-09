@@ -13,6 +13,8 @@ gem 'devise-i18n'
 gem 'sqlite3'
 # Rails gem of the Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
+#bootstrap
+gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
 #internacionalizacion
 gem 'rails-i18n'
 # Use SCSS for stylesheets
