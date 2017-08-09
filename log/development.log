@@ -2223,3 +2223,33 @@ Completed 200 OK in 378ms (Views: 377.4ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/site.self-432f7642176cbbe3478c7986ce439b2c99642bf0f1a81ae971e7c7e6c1e3c3b5.css?body=1" for 10.0.2.2 at 2017-08-09 00:39:43 +0000
 Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-09 01:00:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Site::HomeController#index as HTML
+  Rendered site/home/index.html.erb within layouts/site (6.7ms)
+Completed 200 OK in 3410ms (Views: 3389.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-619c76b1473bf22c0f833a6792e0ec4f9fde219419c0aa44f9303db4c188c0b0.css?body=1" for 10.0.2.2 at 2017-08-09 01:00:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 10.0.2.2 at 2017-08-09 01:00:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-09 01:00:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendered site/home/index.html.erb within layouts/site (0.1ms)
+Completed 200 OK in 225ms (Views: 223.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-09 01:00:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendered site/home/index.html.erb within layouts/site (0.1ms)
+Completed 200 OK in 286ms (Views: 285.1ms | ActiveRecord: 0.0ms)
