@@ -2135,3 +2135,91 @@ Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0
 Processing by Backoffice::DashboardController#index as HTML
   Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
 Completed 200 OK in 489ms (Views: 488.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-09 00:32:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Site::HomeController#index as HTML
+  Rendered site/home/index.html.erb within layouts/site (6.8ms)
+Completed 200 OK in 6477ms (Views: 6454.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 10.0.2.2 at 2017-08-09 00:33:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/site.self-148dc15db8f0346d00104b92ddb96ea43db1ed56b99fe2a581065b0f64bbd3e4.css?body=1" for 10.0.2.2 at 2017-08-09 00:33:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e3aeec5fd5935b99828fb8f43ec8a1afd3aad7f84cc15ac5eafc65b5ad8ef866.css?body=1" for 10.0.2.2 at 2017-08-09 00:33:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/backoffice/dashboard/index" for 10.0.2.2 at 2017-08-09 00:33:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+Completed 200 OK in 406ms (Views: 405.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/backoffice.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 10.0.2.2 at 2017-08-09 00:33:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/backoffice.self-4a4c63b3b379fe307cf83e414c8ae532911fc0a1f3cb82fac49a7c36a8c5b78a.css?body=1" for 10.0.2.2 at 2017-08-09 00:33:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-09 00:33:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendered site/home/index.html.erb within layouts/site (0.1ms)
+Completed 200 OK in 443ms (Views: 442.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-09 00:36:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Site::HomeController#index as HTML
+  Rendered site/home/index.html.erb within layouts/site (5.3ms)
+Completed 200 OK in 4365ms (Views: 4346.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-4a4c63b3b379fe307cf83e414c8ae532911fc0a1f3cb82fac49a7c36a8c5b78a.css?body=1" for 10.0.2.2 at 2017-08-09 00:36:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/backoffice/dashboard/index" for 10.0.2.2 at 2017-08-09 00:36:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+Completed 200 OK in 685ms (Views: 684.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/backoffice.self-1adade3fded52f1d2e52bcf4d4222e5289e5c16cf20c94b93120f8d539ff563b.css?body=1" for 10.0.2.2 at 2017-08-09 00:36:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/backoffice/dashboard/index" for 10.0.2.2 at 2017-08-09 00:39:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Backoffice::DashboardController#index as HTML
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (7.0ms)
+Completed 200 OK in 4318ms (Views: 4280.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/backoffice.self-df51fd9c6bc3af93c9e7bda279a8da1d7210fcd7a9d89014067b1889c43c48bc.css?body=1" for 10.0.2.2 at 2017-08-09 00:39:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-09 00:39:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendered site/home/index.html.erb within layouts/site (0.4ms)
+Completed 200 OK in 378ms (Views: 377.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-432f7642176cbbe3478c7986ce439b2c99642bf0f1a81ae971e7c7e6c1e3c3b5.css?body=1" for 10.0.2.2 at 2017-08-09 00:39:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
