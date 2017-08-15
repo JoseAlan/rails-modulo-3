@@ -47,21 +47,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  #Better error page for Rack apps
+  gem "better_errors"
+  #Better Errors' advanced features 
+  gem "binding_of_caller"
+  #Rails ERD is a gem that allows you to easily generate a diagram based on your application's Active Record models.
+  gem "rails-erd"
+
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  #Better error page for Rack apps
-  gem "better_errors"
-  #Better Errors' advanced features 
-  gem "binding_of_caller"
-
-  #Rails ERD is a gem that allows you to easily generate a diagram based on your application's Active Record models.
-  gem "rails-erd"
-
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
 
