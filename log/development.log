@@ -4804,3 +4804,365 @@ Processing by Backoffice::DashboardController#index as HTML
   Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.1ms)
   Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
 Completed 200 OK in 490ms (Views: 485.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-15 02:44:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Site::HomeController#index as HTML
+  [1m[35mCategory Load (3.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered site/home/index.html.erb within layouts/site (29.0ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.4ms)
+  Rendered layouts/site_shared/_footer.html.erb (1.6ms)
+Completed 200 OK in 2213ms (Views: 2130.9ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/backoffice" for 10.0.2.2 at 2017-08-15 02:44:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (2.1ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ?  ORDER BY "admins"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 836ms (Views: 755.9ms | ActiveRecord: 6.0ms)
+
+
+Started DELETE "/admins/sign_out" for 10.0.2.2 at 2017-08-15 02:44:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tz0cq22MEgzh1iz9L9t6LlA/Zrj1M+E2+x9hwUrukFuPFEMSVTRkqB+jlzWADyIkiRRkOxJkHrSkhccnnnLPsA=="}
+  [1m[35mAdmin Load (2.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."id" = ?  ORDER BY "admins"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 492ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-15 02:44:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  [1m[36mCategory Load (2.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (3.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 281ms (Views: 277.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/backoffice" for 10.0.2.2 at 2017-08-15 02:44:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 10.0.2.2 at 2017-08-15 02:44:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered admins/shared/_links.html.erb (9.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (117.9ms)
+Completed 200 OK in 303ms (Views: 296.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 10.0.2.2 at 2017-08-15 02:45:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"99874OWWyfMJ8MNu50aJyhtzpUBotByymOVnjH8aeqzN9KiKhMMUy/ZSIZEy7HsTBuXVfV24It7pqRI8lNyMyw==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mAdmin Load (2.6ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ?  ORDER BY "admins"."id" ASC LIMIT 1  [["email", "admin@admin.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.4ms)[0m  UPDATE "admins" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = ?  [["last_sign_in_at", "2017-08-15 02:36:39.472479"], ["current_sign_in_at", "2017-08-15 02:45:01.531299"], ["sign_in_count", 5], ["updated_at", "2017-08-15 02:45:01.533074"], ["id", 1]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 303ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/backoffice" for 10.0.2.2 at 2017-08-15 02:45:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[35mAdmin Load (3.7ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."id" = ?  ORDER BY "admins"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 507ms (Views: 500.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:27:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Site::HomeController#index as HTML
+  [1m[35mCategory Load (2.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered site/home/index.html.erb within layouts/site (29.3ms)
+  Rendered layouts/site_shared/_navigation.html.erb (2.4ms)
+  Rendered layouts/site_shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 3699ms (Views: 3622.0ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/assets/bootstrap.self-a9214f0ec5601052001b12251bb57c6dd48135c8fcef35bcc5604b038cb5bfb0.css?body=1" for 10.0.2.2 at 2017-08-23 22:27:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e3aeec5fd5935b99828fb8f43ec8a1afd3aad7f84cc15ac5eafc65b5ad8ef866.css?body=1" for 10.0.2.2 at 2017-08-23 22:27:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/site.self-619c76b1473bf22c0f833a6792e0ec4f9fde219419c0aa44f9303db4c188c0b0.css?body=1" for 10.0.2.2 at 2017-08-23 22:27:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 10.0.2.2 at 2017-08-23 22:27:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 10.0.2.2 at 2017-08-23 22:27:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.2.2 at 2017-08-23 22:27:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 10.0.2.2 at 2017-08-23 22:27:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 10.0.2.2 at 2017-08-23 22:27:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 10.0.2.2 at 2017-08-23 22:27:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/site.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 10.0.2.2 at 2017-08-23 22:27:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 10.0.2.2 at 2017-08-23 22:27:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/favicon.ico" for 10.0.2.2 at 2017-08-23 22:27:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3@escamboapp/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3@escamboapp/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3@escamboapp/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (28.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3@escamboapp/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3@escamboapp/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (65.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:28:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  [1m[36mCategory Load (1.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (2.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 351ms (Views: 349.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:28:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  [1m[35mCategory Load (3.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered site/home/index.html.erb within layouts/site (5.0ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 364ms (Views: 360.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:29:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  [1m[36mCategory Load (1.7ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (3.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 389ms (Views: 387.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:49:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Site::HomeController#index as HTML
+  [1m[35mCategory Load (1.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered site/home/index.html.erb within layouts/site (15.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.3ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 1719ms (Views: 1663.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:49:26 +0000
+Processing by Site::HomeController#index as HTML
+  [1m[36mCategory Load (1.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (3.6ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 408ms (Views: 406.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:49:27 +0000
+Processing by Site::HomeController#index as HTML
+  [1m[35mCategory Load (1.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered site/home/index.html.erb within layouts/site (2.6ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 333ms (Views: 330.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:49:32 +0000
+Processing by Site::HomeController#index as HTML
+  [1m[36mCategory Load (1.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (2.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 297ms (Views: 294.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:49:34 +0000
+Processing by Site::HomeController#index as HTML
+  [1m[35mCategory Load (1.7ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered site/home/index.html.erb within layouts/site (3.4ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 320ms (Views: 318.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:49:36 +0000
+Processing by Site::HomeController#index as HTML
+  [1m[36mCategory Load (1.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (3.3ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 460ms (Views: 457.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:50:18 +0000
+Processing by Site::HomeController#index as HTML
+  [1m[35mCategory Load (2.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered site/home/index.html.erb within layouts/site (3.6ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 326ms (Views: 323.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:51:58 +0000
+Processing by Site::HomeController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+RuntimeError - errro:
+  app/controllers/site/home_controller.rb:5:in `index'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.2.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.2.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.2.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/c967e808a4afccc9/variables" for 10.0.2.2 at 2017-08-23 22:51:58 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2017-08-23 22:52:38 +0000
+Processing by Site::HomeController#index as HTML
+  [1m[36mCategory Load (2.7ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (11.6ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 317ms (Views: 277.6ms | ActiveRecord: 7.0ms)

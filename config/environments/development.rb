@@ -12,6 +12,9 @@ Rails.application.configure do
   #Better Errors Config
   BetterErrors::Middleware.allow_ip! ENV['TRUSTED_IP'] if ENV['TRUSTED_IP']
 
+  #Trusted Config Errors
+  config.web_console.whitelisted_ips = ENV['TRUSTED_IP']
+
   #Devise email Config
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
